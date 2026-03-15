@@ -1,0 +1,44 @@
+you need to develope a employee management web application.
+
+tech stack: React JS( Front end ), Flask ( Backend ), the DB should be PostGreSQL use Python
+
+Key Objects to be in the Application
+
+1.) employee Dashboard: where employees can register and Can update their profile (foe Example consider the WorkDay Website)
+
+2.) admin Dashboard: all the CRUD operations should be able to performed by the Admin:
+
+The admin should and Can able to See all the employee details . include a search option to retrieve the employee details based on any details related to employees.
+And should need a option to categories the employees based on the department .
+
+Also show the Organization Tree like Who the employee reports and like wise, need to whole org tree.
+
+Also as a key note i need a Dashboard where a detailsed reports should be available which include a Diagramatic approach to visualize details for example the Employeee chart. where the admins can filter out the reports data based on the employee categories such as gender based, department wise, etc                                       Authentication
+
+a. Separate login pages for Employee & Admin (with roles)
+
+Departments — Should departments be:
+
+a. Predefined (IT, HR, Finance, Marketing, Operations, etc.)
+
+b. Admin can create/manage departments dynamically
+
+Org Tree — For the organization hierarchy:
+
+b. Multi-level hierarchy (CEO → VP → Manager → Employee)
+
+Charts/Reports Dashboard
+
+Department-wise employee distribution (Bar/Pie chart)
+
+Gender-based breakdown
+
+Joining trends over time (Line chart)
+
+Salary distribution
+
+All of the above
+
+Design preference
+
+a. Corporate blue/white (professional, like Workday)
