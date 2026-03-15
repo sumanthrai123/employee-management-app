@@ -82,6 +82,13 @@ Installed via `npm install` in `frontend/`:
 3. **Important:** The `.gitignore` already excludes `.env`, `venv`, and `node_modules`, so secrets and heavy folders are not uploaded. Anyone who clones the repo must create their own `backend/.env` (see below).
 
 ---
+## Setup (for anyone who cloned / downloaded the repo)
+
+> **Windows users:** run `setup.bat` from the repo root to install dependencies, create `.env`, create the database, and install frontend packages.
+>
+> ```powershell
+> .\setup.bat
+> ```
 
 ## Setup (for anyone who cloned / downloaded the repo)
 
