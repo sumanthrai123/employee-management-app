@@ -12,3 +12,9 @@ and also change config.py with your respective postgres password.
 9)run this command in terminal so that it will allow installing npm: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process.
 10)run commands, npm install ,npm run dev
 11)Your application is up and running (http://localhost:5177/) !!!!
+
+
+You can view complete video of app by downloading EmployeeprojectVideoofapp.zip file.
+
+
+Thank You
