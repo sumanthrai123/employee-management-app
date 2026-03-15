@@ -1,0 +1,64 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e8f4fc 0%, #f5f7fa 100%);
+}
+.home-header {
+  padding: 1rem 2rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.home-header .brand {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.35rem;
+}
+.home-main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+.home-main h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.tagline {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+.login-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.login-card {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  color: var(--text);
+  border: 2px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.login-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(0, 102, 178, 0.15);
+  text-decoration: none;
+  color: var(--text);
+}
+.login-card .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.login-card h2 {
+  margin-bottom: 0.35rem;
+}
+.login-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+@media (max-width: 500px) {
+  .login-cards { grid-template-columns: 1fr; }
+}
