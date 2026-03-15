@@ -20,48 +20,13 @@ Copy the entire prompt below and give it to an AI assistant in one message. The 
 
 ### 2. Project structure
 
-```
-employee-management-app/
-├── .gitignore          # Exclude .env, backend/venv/, frontend/node_modules/, *.db, backend/instance/
-├── README.md            # Prerequisites, setup, run instructions, clone-and-run for others
-├── backend/
-│   ├── .env.example    # FLASK_APP, FLASK_ENV, SECRET_KEY, JWT_SECRET_KEY, DATABASE_URL, ADMIN_EMAIL, ADMIN_PASSWORD
-│   ├── app.py          # create_app(), CORS (localhost:3000, 5173, 5174, 5175, 5176 + 127.0.0.1), register blueprints, db.create_all()
-│   ├── config.py       # load_dotenv; DATABASE_URL required (PostgreSQL); reject YOUR_PASSWORD placeholder; Config class
-│   ├── models.py       # SQLAlchemy: User, Department, Employee (see schema below)
-│   ├── requirements.txt
-│   ├── seed.py         # db.create_all(); create admin user from env; 5 departments; 10 sample employees with hierarchy; 1 employee user (john.smith / employee123)
-│   ├── create_db.py    # Create PostgreSQL database employee_management if not exists (psycopg2)
-│   ├── reset_admin.py  # Ensure admin user exists and set password from ADMIN_PASSWORD
-│   └── routes/
-│       ├── auth.py     # /register, /login/employee, /login/admin, /me (GET, JWT required)
-│       ├── employees.py
-│       ├── departments.py
-│       └── reports.py
-└── frontend/
-    ├── package.json    # react, react-dom, react-router-dom, axios, recharts; vite, @vitejs/plugin-react
-    ├── vite.config.js
-    ├── index.html
-    └── src/
-        ├── main.jsx
-        ├── App.jsx     # BrowserRouter, AuthProvider, routes below
-        ├── api/axios.js # baseURL http://localhost:5000/api, withCredentials, Bearer token, 401/422 → clear storage and redirect to /
-        ├── context/AuthContext.jsx  # user, loading, login(token, userData), logout; persist token/user in localStorage
-        ├── index.css   # Global + corporate theme
-        ├── components/
-        │   ├── Layout.jsx   # Nav: Home, My Profile (employee), Employees/Departments/Org Tree/Reports (admin), Logout
-        │   └── OrgTree.jsx  # Recursive tree from org-tree API
-        └── pages/
-            ├── Home.jsx           # Welcome; two cards: Employee (link /login/employee), Admin (link /login/admin); Register link; show session message if any
-            ├── EmployeeLogin.jsx
-            ├── EmployeeRegister.jsx
-            ├── AdminLogin.jsx
-            ├── EmployeeDashboard.jsx  # View/edit own profile (GET/PUT /employees/:id)
-            ├── AdminDashboard.jsx     # Table of employees; search, filter by department & gender; sort by employee_id (default asc), first_name, last_name, email, job_title, department_id, date_joined; order asc/desc; Add/Edit/Delete employee modal
-            ├── Departments.jsx        # List departments; Add/Edit/Delete
-            ├── OrgTreePage.jsx         # Fetch /employees/org-tree, render OrgTree
-            └── Reports.jsx             # Charts: department distribution, gender breakdown, joining trends, salary distribution; filter by department/gender; use Recharts
-```
+Root folder: employee-management-app. Inside it have a backend folder and a frontend folder.
+
+Backend: .env.example, app.py, config.py, models.py, requirements.txt, seed.py, create_db.py, reset_admin.py, and a routes folder with auth.py, employees.py, departments.py, reports.py.
+
+Frontend: package.json, vite.config.js, index.html, and src. Inside src put main.jsx, App.jsx, api/axios.js, context/AuthContext.jsx, index.css, a components folder with Layout.jsx and OrgTree.jsx, and a pages folder with Home.jsx, EmployeeLogin.jsx, EmployeeRegister.jsx, AdminLogin.jsx, EmployeeDashboard.jsx, AdminDashboard.jsx, Departments.jsx, OrgTreePage.jsx, Reports.jsx.
+
+Also at root: .gitignore and README.md.
 
 ---
 
