@@ -1,0 +1,14 @@
+Steps to follow after installing all dependencies,
+
+1)clone repository in local pc 
+2)Open project in vs code or any editor
+3)change directory to \backend ,install -r requirements.txt in terminal
+4)change .env file  DATABASE_URL = Postgresql://postgres:YOUR_PASSWORD@127.0.0.1:5432/employee_management (mentioned in readme file also)
+and also change config.py with your respective postgres password.
+5)run --> .\run_postgres_setup.bat
+6)python app.py
+7)Terminal asks database password: enter you database password
+8)open 1 more terminal cd to \frontend 
+9)run this command in terminal so that it will allow installing npm: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process.
+10)run commands, npm install ,npm run dev
+11)Your application is up and running (http://localhost:5177/) !!!!
